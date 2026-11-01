@@ -1,0 +1,51 @@
+/* || Global Styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Colour Presets */
+  --white: #fff;
+  --black: #000;
+  --grey-950: #1d2026;
+  --grey-500: #69707d;
+  --grey-300: #c3cad9;
+  --grey-100: #e4e9f2;
+  --grey-50: #f6f8fd;
+  --orange-500: #ff7e1b;
+  --orange-300: #ffab6a;
+
+  /* Font Presets */
+  --txt-preset-1-fs: 44px;
+  --txt-preset-1-fw: 700;
+  --txt-preset-1-lh: 48px;
+
+  --txt-preset-2-fs: 28px;
+  --txt-preset-2-fw: 700;
+  --txt-preset-2-lh: 32px;
+
+  --txt-preset-3b-fs: 16px;
+  --txt-preset-3b-fw: 700;
+  --txt-preset-3b-lh: 26px;
+
+  --txt-preset-3r-fs: 16px;
+  --txt-preset-3r-fw: 400;
+  --txt-preset-3r-lh: 26px;
+
+  --txt-preset-4-fs: 15px;
+  --txt-preset-4-fw: 400;
+  --txt-preset-4-lh: 26px;
+
+  --txt-preset-5-fs: 13px;
+  --txt-preset-5-fw: 700;
+  --txt-preset-5-lh: 16px;
+  --txt-preset-5-ls: 2px;
+
+  --txt-preset-6-fs: 12px;
+  --txt-preset-6-fw: 700;
+  --txt-preset-6-lh: 15px;
+  --txt-preset-6-ls: 1.85px;
+}
