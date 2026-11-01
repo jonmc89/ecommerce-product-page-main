@@ -19,33 +19,83 @@
   --orange-300: #ffab6a;
 
   /* Font Presets */
-  --txt-preset-1-fs: 44px;
+  --txt-preset-1-fs: 2.75rem;
   --txt-preset-1-fw: 700;
-  --txt-preset-1-lh: 48px;
+  --txt-preset-1-lh: 3rem;
 
-  --txt-preset-2-fs: 28px;
+  --txt-preset-2-fs: 1.75rem;
   --txt-preset-2-fw: 700;
-  --txt-preset-2-lh: 32px;
+  --txt-preset-2-lh: 2rem;
 
-  --txt-preset-3b-fs: 16px;
+  --txt-preset-3b-fs: 1rem;
   --txt-preset-3b-fw: 700;
-  --txt-preset-3b-lh: 26px;
+  --txt-preset-3b-lh: 1.625rem;
 
-  --txt-preset-3r-fs: 16px;
+  --txt-preset-3r-fs: 1rem;
   --txt-preset-3r-fw: 400;
-  --txt-preset-3r-lh: 26px;
+  --txt-preset-3r-lh: 1.625rem;
 
-  --txt-preset-4-fs: 15px;
+  --txt-preset-4-fs: 0.9375rem;
   --txt-preset-4-fw: 400;
-  --txt-preset-4-lh: 26px;
+  --txt-preset-4-lh: 1.625rem;
 
-  --txt-preset-5-fs: 13px;
+  --txt-preset-5-fs: 0.8125rem;
   --txt-preset-5-fw: 700;
-  --txt-preset-5-lh: 16px;
-  --txt-preset-5-ls: 2px;
+  --txt-preset-5-lh: 1rem;
+  --txt-preset-5-ls: 0.125rem;
 
-  --txt-preset-6-fs: 12px;
+  --txt-preset-6-fs: 0.75rem;
   --txt-preset-6-fw: 700;
-  --txt-preset-6-lh: 15px;
-  --txt-preset-6-ls: 1.85px;
+  --txt-preset-6-lh: 0.9375rem;
+  --txt-preset-6-ls: 0.1156rem;
+}
+
+/* || Main Styles */
+
+/* Header */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.header-container-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  button {
+    cursor: pointer;
+    border: none;
+    background-color: none;
+    padding: none;
+  }
+}
+
+.header-container-right {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+
+  button {
+    cursor: pointer;
+    border: none;
+    background-color: none;
+  }
+
+  img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+/* Hero Slide Show */
+
+.hero-slide-show {
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
