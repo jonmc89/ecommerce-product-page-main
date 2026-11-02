@@ -9,13 +9,39 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght,YOPQ@100..900,300&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles.css" />
     <title>Frontend Mentor | E-commerce product page</title>
+    <script src="./script.js" defer></script>
   </head>
   <body>
+    <div id="mobileMenu" class="mobile-menu-container">
+      <nav class="mobile-nav" aria-label="Mobile navigation">
+        <ul class="mobile-nav-list">
+          <li><a class="mobile-nav-link" href="#">Collections</a></li>
+          <li><a class="mobile-nav-link" href="#">Men</a></li>
+          <li><a class="mobile-nav-link" href="#">Woman</a></li>
+          <li><a class="mobile-nav-link" href="#">About</a></li>
+          <li><a class="mobile-nav-link" href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
     <header>
       <div class="header-container-left">
-        <button><img src="./images/icon-menu.svg" alt="menu button" /></button>
+        <button>
+          <div
+            id="mobileMenuBtn"
+            class="menu-button-icon"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+          ></div>
+        </button>
         <img src="./images/logo.svg" alt="" />
       </div>
       <div class="header-container-right">
