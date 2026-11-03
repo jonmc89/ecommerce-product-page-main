@@ -2,6 +2,7 @@ const mobileMenuBtnEl = document.getElementById('mobileMenuBtn');
 const mobileMenuEl = document.getElementById('mobileMenu');
 const cartEl = document.getElementById('cartEl');
 const cartIconEl = document.getElementById('cartIconEl');
+const overlayEl = document.getElementById('overlayEl');
 
 mobileMenuBtnEl.addEventListener('click', () => {
   const isOpen = mobileMenuBtnEl.getAttribute('aria-expanded') === 'true';
@@ -17,6 +18,7 @@ mobileMenuBtnEl.addEventListener('click', () => {
 
   mobileMenuEl.classList.toggle('mobile-menu-open', !isOpen);
   mobileMenuBtnEl.classList.toggle('menu-button-icon-close', !isOpen);
+  overlayEl.classList.toggle('overlay-show');
 });
 
 cartIconEl.addEventListener('click', () => {

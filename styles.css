@@ -28,6 +28,24 @@ body {
   font-family: 'Kumbh Sans', sans-serif;
 }
 
+/* Overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.2s ease-in-out;
+  background-color: var(--grey-950);
+  width: 100%;
+  height: 100dvh;
+}
+
+.overlay-show {
+  opacity: 0.5;
+  z-index: 95;
+}
+
 /* Mobile Menu */
 
 .mobile-menu-container {
@@ -36,14 +54,14 @@ body {
   left: 0;
   transform: translateX(-100vw);
   opacity: 0;
-  z-index: 2;
+  z-index: 98;
   transition:
     transform 0.2s ease-in-out,
     opacity 0.2s ease-in-out;
   background-color: var(--white);
   padding: 0 1.5rem;
   width: 15.625rem;
-  height: 100%;
+  height: 100dvh;
   pointer-events: none;
 }
 
