@@ -24,7 +24,6 @@
 
 body {
   position: relative;
-  overflow-x: hidden;
   scroll-behavior: smooth;
   font-family: 'Kumbh Sans', sans-serif;
 }
@@ -96,6 +95,7 @@ body {
   left: 50%;
   transform: translate(-50%, -100vh);
   opacity: 0;
+  z-index: 98;
   transition:
     transform 0.3s ease-in-out,
     opacity 0.2s ease-in-out;
@@ -200,12 +200,58 @@ main {
 
 /* Hero Slide Show */
 
-.hero-slide-show {
-  img {
-    margin-block-end: 1.5rem;
-    width: 100%;
-    height: auto;
-  }
+.image-carousel-container {
+  display: flex;
+  anchor-name: --image-carousel;
+  flex-direction: row;
+  margin-block-end: 1.5rem;
+  background-color: #c3cad9;
+  width: 100%;
+  height: 18.75rem;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  list-style: none;
+}
+
+.image-carousel-container::-webkit-scrollbar {
+  display: none;
+}
+
+.image-carousel-container::scroll-button(*) {
+  position: absolute;
+  position-anchor: --image-carousel;
+  top: anchor(center);
+  translate: 0 -50%;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  padding: 0.5rem;
+  width: 3rem;
+  height: 3rem;
+}
+
+.image-carousel-container::scroll-button(left) {
+  left: calc(anchor(right) - 100% + 1rem);
+  content: url(./images/icon-previous.svg);
+}
+.image-carousel-container::scroll-button(right) {
+  right: calc(anchor(left) - 100% + 1rem);
+  content: url(./images/icon-next.svg);
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+  height: 100%;
+  scroll-snap-align: center;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Main Content Container */
