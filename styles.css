@@ -17,6 +17,7 @@
   --grey-50: #f6f8fd;
   --orange-500: #ff7e1b;
   --orange-300: #ffab6a;
+  --orange-shadow: rgba(255, 171, 106, 0.5);
 }
 
 /* || Main Styles */
@@ -43,7 +44,7 @@ body {
   background-color: var(--white);
   padding: 0 1.5rem;
   width: 15.625rem;
-  height: 100dvh;
+  height: 100%;
   pointer-events: none;
 }
 
@@ -191,6 +192,12 @@ header {
   }
 }
 
+/* Main */
+
+main {
+  margin-block-end: 4rem;
+}
+
 /* Hero Slide Show */
 
 .hero-slide-show {
@@ -268,4 +275,61 @@ header {
     line-height: 1.625rem;
     text-decoration: line-through;
   }
+}
+
+.item-quantity-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.item-amount-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.625rem;
+  background-color: var(--grey-50);
+  padding: 1rem;
+
+  img {
+    cursor: pointer;
+  }
+}
+
+.amount {
+  color: var(--grey-950);
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.625rem;
+}
+
+.add-to-cart-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  transition: filter 0.2s ease-in-out;
+  cursor: pointer;
+  box-shadow: 0rem 1rem 2rem var(--orange-shadow);
+  border: none;
+  border-radius: 0.625rem;
+  background-color: var(--orange-500);
+  padding: 1rem;
+  width: 100%;
+
+  p {
+    color: var(--grey-950);
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.625rem;
+  }
+
+  img {
+    filter: brightness(0) saturate(100%) invert(6%) sepia(4%) saturate(4730%)
+      hue-rotate(182deg) brightness(101%) contrast(85%);
+  }
+}
+
+.add-to-cart-button:hover {
+  filter: brightness(110%);
 }
