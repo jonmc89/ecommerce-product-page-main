@@ -63,3 +63,30 @@ thumbnails.forEach((thumbnail, index) => {
     thumbnail.classList.add('thumbnail-active');
   });
 });
+
+// Cart Amount
+
+const amountQty = document.getElementById('amountQty');
+const plusQtyBtn = document.getElementById('plusQtyBtn');
+const minusQtyBtn = document.getElementById('minusQtyBtn');
+
+let itemQty = 0;
+let totalPrice = 125.0;
+
+function updateAmount() {
+  amountQty.textContent = itemQty;
+}
+
+function increaseAmount() {
+  itemQty++;
+  updateAmount();
+}
+function decreaseAmount() {
+  if (itemQty > 0) {
+    itemQty--;
+  }
+  updateAmount();
+}
+
+plusQtyBtn.addEventListener('click', increaseAmount);
+minusQtyBtn.addEventListener('click', decreaseAmount);
