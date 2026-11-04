@@ -553,4 +553,11 @@ main {
   .thumbnail-list {
     display: flex;
   }
+
+  .cart-container {
+    top: 6rem;
+    left: 80%;
+    box-shadow: 0rem 1rem 1rem var(--grey-300);
+    width: 18.75rem;
+  }
 }
