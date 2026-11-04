@@ -326,6 +326,11 @@ main {
   }
 }
 
+.thumbnail-active {
+  opacity: 0.8;
+  border: 0.2rem solid var(--orange-500);
+}
+
 /* Main Content Container */
 
 .main-content {
@@ -517,7 +522,8 @@ main {
   /* Header */
 
   header {
-    border-bottom: 0.1rem solid var(--grey-100);
+    margin-block-end: 3rem;
+    border-bottom: 0.1rem solid var(--grey-300);
     padding: 1rem 0 2rem 0;
   }
 
@@ -557,7 +563,7 @@ main {
   .cart-container {
     top: 6rem;
     left: 80%;
-    box-shadow: 0rem 1rem 1rem var(--grey-300);
+    box-shadow: 0rem 2rem 2em var(--grey-500);
     width: 18.75rem;
   }
 }

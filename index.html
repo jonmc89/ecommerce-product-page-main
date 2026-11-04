@@ -17,7 +17,7 @@
     />
     <link rel="stylesheet" href="./styles.css" />
     <title>Frontend Mentor | E-commerce product page</title>
-    <script src="./script.js" defer></script>
+    <script class="thumbnail-image" src="./script.js" defer></script>
   </head>
   <body>
     <div id="overlayEl" class="overlay"></div>
@@ -51,7 +51,7 @@
             aria-controls="mobileMenu"
           ></div>
         </button>
-        <img src="./images/logo.svg" alt="" />
+        <img class="thumbnail-image" src="./images/logo.svg" alt="" />
         <nav class="desktop-nav-container">
           <ul class="desktop-nav-list">
             <li><a class="desktop-nav-link" href="#">Collections</a></li>
@@ -69,9 +69,14 @@
           aria-expanded="false"
           aria-controls="cartElMenu"
         >
-          <img src="./images/icon-cart.svg" alt="cart icon" />
+          <img
+            class="thumbnail-image"
+            src="./images/icon-cart.svg"
+            alt="cart icon"
+          />
         </button>
         <img
+          class="thumbnail-image"
           src="./images/image-avatar.png"
           alt="a picture of a man with long brown hair"
         />
@@ -112,16 +117,32 @@
         <div class="thumbnail-container">
           <ul class="thumbnail-list">
             <li class="thumbnail-item">
-              <img src="./images/image-product-1-thumbnail.jpg" alt="" />
+              <img
+                class="thumbnail-image"
+                src="./images/image-product-1-thumbnail.jpg"
+                alt=""
+              />
             </li>
             <li class="thumbnail-item">
-              <img src="./images/image-product-2-thumbnail.jpg" alt="" />
+              <img
+                class="thumbnail-image"
+                src="./images/image-product-2-thumbnail.jpg"
+                alt=""
+              />
             </li>
             <li class="thumbnail-item">
-              <img src="./images/image-product-3-thumbnail.jpg" alt="" />
+              <img
+                class="thumbnail-image"
+                src="./images/image-product-3-thumbnail.jpg"
+                alt=""
+              />
             </li>
             <li class="thumbnail-item">
-              <img src="./images/image-product-4-thumbnail.jpg" alt="" />
+              <img
+                class="thumbnail-image"
+                src="./images/image-product-4-thumbnail.jpg"
+                alt=""
+              />
             </li>
           </ul>
         </div>
@@ -147,13 +168,22 @@
         </div>
         <div class="item-quantity-section">
           <div class="item-amount-container">
-            <img src="./images/icon-minus.svg" alt="plus button" />
+            <img
+              class="thumbnail-image"
+              src="./images/icon-minus.svg"
+              alt="plus button"
+            />
             <span class="amount">0</span>
-            <img src="./images/icon-plus.svg" alt="minus button" />
+            <img
+              class="thumbnail-image"
+              src="./images/icon-plus.svg"
+              alt="minus button"
+            />
           </div>
           <button class="add-to-cart-button">
             <img
               class="add-to-cart-icon"
+              class="thumbnail-image"
               src="./images/icon-cart.svg"
               alt="cart icon"
             />

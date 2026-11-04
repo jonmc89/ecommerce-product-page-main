@@ -1,7 +1,7 @@
+// Mobile Menu
 const mobileMenuBtnEl = document.getElementById('mobileMenuBtn');
 const mobileMenuEl = document.getElementById('mobileMenu');
-const cartEl = document.getElementById('cartEl');
-const cartIconEl = document.getElementById('cartIconEl');
+
 const overlayEl = document.getElementById('overlayEl');
 
 mobileMenuBtnEl.addEventListener('click', () => {
@@ -21,6 +21,11 @@ mobileMenuBtnEl.addEventListener('click', () => {
   overlayEl.classList.toggle('overlay-show');
 });
 
+// Cart Menu
+
+const cartEl = document.getElementById('cartEl');
+const cartIconEl = document.getElementById('cartIconEl');
+
 cartIconEl.addEventListener('click', () => {
   const isOpen = cartIconEl.getAttribute('aria-expanded') === 'true';
 
@@ -34,4 +39,27 @@ cartIconEl.addEventListener('click', () => {
   cartEl.inert = isOpen;
 
   cartEl.classList.toggle('cart-visible', !isOpen);
+});
+
+// Desktop Image Selection
+
+const carouselItems = document.querySelectorAll('.carousel-item');
+const thumbnails = document.querySelectorAll(
+  '.thumbnail-item .thumbnail-image',
+);
+
+thumbnails.forEach((thumbnail, index) => {
+  thumbnail.addEventListener('click', () => {
+    carouselItems[index].scrollIntoView({
+      behavior: 'smooth',
+      block: 'nearest',
+      inline: 'center',
+    });
+
+    thumbnails.forEach((thumb) => {
+      thumb.classList.remove('thumbnail-active');
+    });
+
+    thumbnail.classList.add('thumbnail-active');
+  });
 });
