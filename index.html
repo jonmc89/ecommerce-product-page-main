@@ -37,7 +37,30 @@
         <p>Cart</p>
       </div>
       <div class="cart-bottom">
-        <p>Your cart is empty</p>
+        <p id="cartEmpty" class="cart-empty">Your cart is empty</p>
+        <div id="cartSummary" class="cart-summary">
+          <div class="cart-details">
+            <img
+              class="cart-thumbnail"
+              src="./images/image-product-1-thumbnail.jpg"
+              alt=""
+            />
+            <div class="cart-summary-text">
+              <div class="summary">
+                <h4>Fall Limited Edition Sneakers</h4>
+                <p class="cart-list-price">
+                  $125.00 x <span id="cartQty" class="cart-qty"></span>
+                  <span class="total-price"></span
+                  ><span id="totalPriceAmount"></span>
+                </p>
+              </div>
+              <button id="deleteBtn" class="delete-button">
+                <img src="./images/icon-delete.svg" alt="" />
+              </button>
+            </div>
+          </div>
+          <button class="checkout-button">Checkout</button>
+        </div>
       </div>
     </div>
     <header>
@@ -83,7 +106,7 @@
       </div>
     </header>
     <main>
-      <div class="image-container">
+      <div id="mainImage" class="image-container">
         <ul class="image-carousel-container">
           <li class="carousel-item">
             <img
@@ -182,7 +205,7 @@
               alt="minus button"
             />
           </div>
-          <button class="add-to-cart-button">
+          <button id="addToCart" class="add-to-cart-button">
             <img
               class="add-to-cart-icon"
               class="thumbnail-image"

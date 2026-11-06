@@ -69,24 +69,61 @@ thumbnails.forEach((thumbnail, index) => {
 const amountQty = document.getElementById('amountQty');
 const plusQtyBtn = document.getElementById('plusQtyBtn');
 const minusQtyBtn = document.getElementById('minusQtyBtn');
+const addToCart = document.getElementById('addToCart');
+const cartQty = document.getElementById('cartQty');
+const totalPriceAmount = document.getElementById('totalPriceAmount');
+const cartEmpty = document.getElementById('cartEmpty');
+const cartSummary = document.getElementById('cartSummary');
+const deleteBtn = document.getElementById('deleteBtn');
 
+// Price Maths
 let itemQty = 0;
-let totalPrice = 125.0;
+let listPrice = 125.0;
+listPrice = listPrice.toFixed(2);
+let totalPrice;
 
-function updateAmount() {
+function addToAmount() {
   amountQty.textContent = itemQty;
+  totalPrice = listPrice * itemQty;
+  totalPrice = totalPrice.toFixed(2);
 }
 
+function removeFromAmount() {
+  amountQty.textContent = itemQty;
+  totalPrice = totalPrice - listPrice;
+}
+
+// Button Functions
 function increaseAmount() {
   itemQty++;
-  updateAmount();
+  addToAmount();
 }
 function decreaseAmount() {
   if (itemQty > 0) {
     itemQty--;
   }
-  updateAmount();
+  removeFromAmount();
 }
+
+function updateCart() {
+  if (itemQty === 0) {
+    cartEmpty.classList.remove('cart-empty-hide');
+    cartSummary.classList.remove('cart-summary-show');
+  } else {
+    cartQty.textContent = itemQty;
+    totalPriceAmount.textContent = `$${totalPrice}`;
+    cartEmpty.classList.add('cart-empty-hide');
+    cartSummary.classList.add('cart-summary-show');
+  }
+}
+
+function clearCart() {
+  itemQty = 0;
+  updateCart();
+}
+// Event Listeners
 
 plusQtyBtn.addEventListener('click', increaseAmount);
 minusQtyBtn.addEventListener('click', decreaseAmount);
+addToCart.addEventListener('click', updateCart);
+deleteBtn.addEventListener('click', clearCart);
