@@ -288,12 +288,15 @@ header {
 }
 
 .amount-badge {
-  display: none;
+  display: flex;
   position: absolute;
   top: -1rem;
   right: -1rem;
   justify-content: center;
   align-items: center;
+  opacity: 0;
+  z-index: -2;
+  transition: opacity 0.1s ease-in-out;
   border-radius: 50%;
   background-color: #ff7e1b;
   width: 1.5rem;
@@ -301,7 +304,8 @@ header {
 }
 
 .amount-badge-show {
-  display: flex;
+  opacity: 1;
+  z-index: 10;
 }
 
 /* Desktop Nav */
@@ -658,6 +662,6 @@ main {
     top: 6rem;
     left: 80%;
     box-shadow: 0rem 2rem 2em var(--grey-500);
-    width: 18.75rem;
+    width: 22rem;
   }
 }

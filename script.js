@@ -26,9 +26,10 @@ mobileMenuBtnEl.addEventListener('click', () => {
 const cartEl = document.getElementById('cartEl');
 const cartIconEl = document.getElementById('cartIconEl');
 
-cartIconEl.addEventListener('click', () => {
+cartIconEl.addEventListener('click', (event) => {
   const isOpen = cartIconEl.getAttribute('aria-expanded') === 'true';
 
+  event.stopPropagation();
   cartIconEl.setAttribute('aria-expanded', String(!isOpen));
 
   cartIconEl.setAttribute(
@@ -133,3 +134,31 @@ plusQtyBtn.addEventListener('click', increaseAmount);
 minusQtyBtn.addEventListener('click', decreaseAmount);
 addToCart.addEventListener('click', updateCart);
 deleteBtn.addEventListener('click', clearCart);
+
+// Clickable areas
+
+document.addEventListener('click', (event) => {
+  // Close cart when clicking outside
+  if (!cartEl.contains(event.target) && !cartIconEl.contains(event.target)) {
+    cartEl.classList.remove('cart-visible');
+    cartEl.inert = true;
+
+    cartIconEl.setAttribute('aria-expanded', 'false');
+    cartIconEl.setAttribute('aria-label', 'Open cart menu');
+  }
+
+  // Close mobile menu when clicking outside
+  if (
+    !mobileMenuEl.contains(event.target) &&
+    !mobileMenuBtnEl.contains(event.target)
+  ) {
+    mobileMenuEl.classList.remove('mobile-menu-open');
+    mobileMenuEl.inert = true;
+
+    mobileMenuBtnEl.setAttribute('aria-expanded', 'false');
+    mobileMenuBtnEl.setAttribute('aria-label', 'Open navigation menu');
+
+    mobileMenuBtnEl.classList.remove('menu-button-icon-close');
+    overlayEl.classList.remove('overlay-show');
+  }
+});
