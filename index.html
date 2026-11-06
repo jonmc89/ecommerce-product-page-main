@@ -86,18 +86,23 @@
         </nav>
       </div>
       <div class="header-container-right">
-        <button
-          id="cartIconEl"
-          aria-label="Open cart menu"
-          aria-expanded="false"
-          aria-controls="cartElMenu"
-        >
-          <img
-            class="thumbnail-image"
-            src="./images/icon-cart.svg"
-            alt="cart icon"
-          />
-        </button>
+        <div class="header-cart-icon-container">
+          <div id="amountBadgeWrapper" class="amount-badge">
+            <p id="amountBadgeValue"></p>
+          </div>
+          <button
+            id="cartIconEl"
+            aria-label="Open cart menu"
+            aria-expanded="false"
+            aria-controls="cartElMenu"
+          >
+            <img
+              class="thumbnail-image"
+              src="./images/icon-cart.svg"
+              alt="cart icon"
+            />
+          </button>
+        </div>
         <img
           class="thumbnail-image"
           src="./images/image-avatar.png"
@@ -208,7 +213,6 @@
           <button id="addToCart" class="add-to-cart-button">
             <img
               class="add-to-cart-icon"
-              class="thumbnail-image"
               src="./images/icon-cart.svg"
               alt="cart icon"
             />

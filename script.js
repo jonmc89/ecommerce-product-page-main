@@ -75,6 +75,8 @@ const totalPriceAmount = document.getElementById('totalPriceAmount');
 const cartEmpty = document.getElementById('cartEmpty');
 const cartSummary = document.getElementById('cartSummary');
 const deleteBtn = document.getElementById('deleteBtn');
+const amountBadge = document.getElementById('amountBadgeWrapper');
+const amountBadgeValue = document.getElementById('amountBadgeValue');
 
 // Price Maths
 let itemQty = 0;
@@ -91,6 +93,7 @@ function addToAmount() {
 function removeFromAmount() {
   amountQty.textContent = itemQty;
   totalPrice = totalPrice - listPrice;
+  totalPrice = totalPrice.toFixed(2);
 }
 
 // Button Functions
@@ -109,11 +112,14 @@ function updateCart() {
   if (itemQty === 0) {
     cartEmpty.classList.remove('cart-empty-hide');
     cartSummary.classList.remove('cart-summary-show');
+    amountBadge.classList.remove('amount-badge-show');
   } else {
     cartQty.textContent = itemQty;
     totalPriceAmount.textContent = `$${totalPrice}`;
     cartEmpty.classList.add('cart-empty-hide');
     cartSummary.classList.add('cart-summary-show');
+    amountBadge.classList.add('amount-badge-show');
+    amountBadgeValue.textContent = itemQty;
   }
 }
 
