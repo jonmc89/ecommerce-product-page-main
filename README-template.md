@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](<./127.0.0.1_5500_(Laptop)%20(1).png>)
 
 #### Mobile Devices
 
@@ -114,6 +114,38 @@ I learned how to implement and image carousel using just css.
   height: 100%;
   object-fit: cover;
 }
+```
+
+Learning how to close the pop up menu's when the rest of the screen is access.
+
+```js
+// Clickable areas
+
+document.addEventListener('click', (event) => {
+  // Close cart when clicking outside
+  if (!cartEl.contains(event.target) && !cartIconEl.contains(event.target)) {
+    cartEl.classList.remove('cart-visible');
+    cartEl.inert = true;
+
+    cartIconEl.setAttribute('aria-expanded', 'false');
+    cartIconEl.setAttribute('aria-label', 'Open cart menu');
+  }
+
+  // Close mobile menu when clicking outside
+  if (
+    !mobileMenuEl.contains(event.target) &&
+    !mobileMenuBtnEl.contains(event.target)
+  ) {
+    mobileMenuEl.classList.remove('mobile-menu-open');
+    mobileMenuEl.inert = true;
+
+    mobileMenuBtnEl.setAttribute('aria-expanded', 'false');
+    mobileMenuBtnEl.setAttribute('aria-label', 'Open navigation menu');
+
+    mobileMenuBtnEl.classList.remove('menu-button-icon-close');
+    overlayEl.classList.remove('overlay-show');
+  }
+});
 ```
 
 ### Continued development
