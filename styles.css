@@ -376,6 +376,7 @@ header {
 
 .lightbox-main-content {
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
   padding-top: 8rem;
@@ -384,15 +385,79 @@ header {
 }
 
 .lightbox-carousel {
+  display: flex;
+  anchor-name: --lightbox-carousel;
+  flex-direction: row;
   z-index: 120;
+  width: 34.375rem;
+  height: auto;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  list-style: none;
+}
 
-  width: 18.75rem;
-  height: 18.75rem;
+.lightbox-carousel-item {
+  flex: 0 0 100%;
+  height: 100%;
+  scroll-snap-align: center;
+}
+.lightbox-image {
+  flex: 0 0 100%;
+  border-radius: 0.625rem;
+
+  width: 100%;
+  height: auto;
+  height: 100%;
+  height: 100%;
+  object-fit: cover;
+  scroll-snap-align: center;
+}
+
+.lightbox-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.lightbox-carousel::scroll-button(*) {
+  position: absolute;
+  position-anchor: --lightbox-carousel;
+  top: anchor(center);
+  translate: 0 -50%;
+  z-index: 120;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  padding: 0.5rem;
+  width: 3rem;
+  height: 3rem;
+}
+
+.lightbox-carousel::scroll-button(left) {
+  left: calc(anchor(left) + -1rem);
+  content: url(./images/icon-previous.svg);
+}
+.lightbox-carousel::scroll-button(right) {
+  left: calc(anchor(right) + -1rem);
+  content: url(./images/icon-next.svg);
+}
+
+.close-lightbox-btn {
+  position: absolute;
+  top: 5.5rem;
+  left: 65%;
+  transform: translateX(-60%);
+  z-index: 200;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%)
+    hue-rotate(127deg) brightness(109%) contrast(102%);
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
 
   img {
-    border-radius: 0.625rem;
-    width: 550px;
-    height: auto;
+    width: 1.5rem;
+    height: 1.5rem;
   }
 }
 

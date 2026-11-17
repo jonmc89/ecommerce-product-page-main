@@ -112,15 +112,46 @@
     </header>
     <div id="lightboxContainer" class="lightbox-container">
       <div class="lightbox-overlay"></div>
+
       <div class="lightbox-main-content">
-        <div class="lightbox-carousel">
-          <img src="./images/image-product-1.jpg" alt="" />
-        </div>
+        <button id="closeLightBoxBtn" class="close-lightbox-btn">
+          <img src="./images/icon-close.svg" alt="" />
+        </button>
+        <ul class="lightbox-carousel">
+          <li class="lightbox-carousel-item">
+            <img
+              class="lightbox-image"
+              src="./images/image-product-1.jpg"
+              alt=""
+            />
+          </li>
+          <li class="lightbox-carousel-item">
+            <img
+              class="lightbox-image"
+              src="./images/image-product-2.jpg"
+              alt=""
+            />
+          </li>
+          <li class="lightbox-carousel-item">
+            <img
+              class="lightbox-image"
+              src="./images/image-product-3.jpg"
+              alt=""
+            />
+          </li>
+          <li class="lightbox-carousel-item">
+            <img
+              class="lightbox-image"
+              src="./images/image-product-4.jpg"
+              alt=""
+            />
+          </li>
+        </ul>
       </div>
     </div>
     <main>
       <div class="image-container">
-        <ul id="mainImage" class="image-carousel-container">
+        <ul class="image-carousel-container" id="mainImage">
           <li class="carousel-item">
             <img
               class="carousel-image"

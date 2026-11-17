@@ -167,7 +167,12 @@ document.addEventListener('click', (event) => {
 
 const lightboxContainer = document.getElementById('lightboxContainer');
 const mainImage = document.getElementById('mainImage');
+const closeLighboxBtn = document.getElementById('closeLightBoxBtn');
 
-// mainImage.addEventListener('click', () => {
-//   lightboxContainer.classList.add('open-lightbox');
-// });
+mainImage.addEventListener('click', () => {
+  lightboxContainer.classList.add('open-light-box');
+});
+
+closeLighboxBtn.addEventListener('click', () => {
+  lightboxContainer.classList.remove('open-light-box');
+});
