@@ -344,6 +344,58 @@ header {
   color: var(--grey-950);
 }
 
+/* Lightbox */
+
+.lightbox-container {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+}
+
+.lightbox-overlay {
+  position: absolute;
+  opacity: 0.9;
+  z-index: 115;
+  background-color: #1d2026;
+  width: 100%;
+  height: 100vh;
+}
+
+.open-light-box {
+  opacity: 1;
+  z-index: 110;
+}
+
+.lightbox-main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 8rem;
+  width: 100%;
+  height: 100vh;
+}
+
+.lightbox-carousel {
+  z-index: 120;
+
+  width: 18.75rem;
+  height: 18.75rem;
+
+  img {
+    border-radius: 0.625rem;
+    width: 550px;
+    height: auto;
+  }
+}
+
 /* Main */
 
 main {
@@ -612,17 +664,16 @@ main {
 
 @media screen and (min-width: 1200px) {
   body {
-    margin-inline: auto;
-    width: min(100% - 4rem, 1200px);
-    overflow: hidden;
-  }
+    /* Header */
 
-  /* Header */
-
-  header {
-    margin-block-end: 3rem;
-    border-bottom: 0.1rem solid var(--grey-300);
-    padding: 1rem 0 2rem 0;
+    header {
+      margin-inline: auto;
+      margin-block-end: 3rem;
+      border-bottom: 0.1rem solid var(--grey-300);
+      padding: 1rem 0 2rem 0;
+      width: min(100% - 4rem, 1200px);
+      overflow: hidden;
+    }
   }
 
   .menu-button-icon {
@@ -640,8 +691,10 @@ main {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 6rem;
+    margin-inline: auto;
+    width: min(100% - 4rem, 1200px);
+    overflow: hidden;
   }
-
   .main-content {
     height: 31.25rem;
   }

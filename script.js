@@ -162,3 +162,12 @@ document.addEventListener('click', (event) => {
     overlayEl.classList.remove('overlay-show');
   }
 });
+
+// Lightbox
+
+const lightboxContainer = document.getElementById('lightboxContainer');
+const mainImage = document.getElementById('mainImage');
+
+// mainImage.addEventListener('click', () => {
+//   lightboxContainer.classList.add('open-lightbox');
+// });
