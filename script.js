@@ -126,6 +126,7 @@ function updateCart() {
 
 function clearCart() {
   itemQty = 0;
+  amountQty.textContent = 0;
   updateCart();
 }
 // Event Listeners
