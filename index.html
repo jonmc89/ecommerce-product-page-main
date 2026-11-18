@@ -65,14 +65,12 @@
     </div>
     <header>
       <div class="header-container-left">
-        <button>
-          <div
-            id="mobileMenuBtn"
-            class="menu-button-icon"
-            aria-label="Open navigation menu"
-            aria-expanded="false"
-            aria-controls="mobileMenu"
-          ></div>
+        <button
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          <div id="mobileMenuBtn" class="menu-button-icon"></div>
         </button>
         <img class="thumbnail-image" src="./images/logo.svg" alt="" />
         <nav class="desktop-nav-container">
@@ -94,7 +92,7 @@
             id="cartIconEl"
             aria-label="Open cart menu"
             aria-expanded="false"
-            aria-controls="cartElMenu"
+            aria-controls="cartEl"
           >
             <img
               class="thumbnail-image"
@@ -114,7 +112,11 @@
       <div class="lightbox-overlay"></div>
 
       <div class="lightbox-main-content">
-        <button id="closeLightBoxBtn" class="close-lightbox-btn">
+        <button
+          id="closeLightBoxBtn"
+          class="close-lightbox-btn"
+          aria-label="Close image gallery"
+        >
           <img src="./images/icon-close.svg" alt="" />
         </button>
         <ul class="lightbox-carousel">
@@ -122,28 +124,28 @@
             <img
               class="lightbox-image"
               src="./images/image-product-1.jpg"
-              alt=""
+              alt="Front view of sneakers"
             />
           </li>
           <li class="lightbox-carousel-item">
             <img
               class="lightbox-image"
               src="./images/image-product-2.jpg"
-              alt=""
+              alt="Sneakers on some rocks"
             />
           </li>
           <li class="lightbox-carousel-item">
             <img
               class="lightbox-image"
               src="./images/image-product-3.jpg"
-              alt=""
+              alt="Frontview of one of the sneakers on some rocks"
             />
           </li>
           <li class="lightbox-carousel-item">
             <img
               class="lightbox-image"
               src="./images/image-product-4.jpg"
-              alt=""
+              alt="Side view of a sneaker on some rocks"
             />
           </li>
         </ul>
@@ -156,28 +158,28 @@
             <img
               class="carousel-image"
               src="./images/image-product-1.jpg"
-              alt="image of some trainer"
+              alt="Front view of sneakers"
             />
           </li>
           <li class="carousel-item">
             <img
               class="carousel-image"
               src="./images/image-product-2.jpg"
-              alt="image of some trainer"
+              alt="Sneakers on some rocks"
             />
           </li>
           <li class="carousel-item">
             <img
               class="carousel-image"
               src="./images/image-product-3.jpg"
-              alt="image of some trainer"
+              alt="Frontview of one of the sneakers on some rocks"
             />
           </li>
           <li class="carousel-item">
             <img
               class="carousel-image"
               src="./images/image-product-4.jpg"
-              alt="image of some trainer"
+              alt="Side view of a sneaker on some rocks"
             />
           </li>
         </ul>
@@ -187,28 +189,28 @@
               <img
                 class="thumbnail-image"
                 src="./images/image-product-1-thumbnail.jpg"
-                alt=""
+                alt="Front view of sneakers"
               />
             </li>
             <li class="thumbnail-item">
               <img
                 class="thumbnail-image"
                 src="./images/image-product-2-thumbnail.jpg"
-                alt=""
+                alt="Sneakers on some rocks"
               />
             </li>
             <li class="thumbnail-item">
               <img
                 class="thumbnail-image"
                 src="./images/image-product-3-thumbnail.jpg"
-                alt=""
+                alt="Frontview of one of the sneakers on some rocks"
               />
             </li>
             <li class="thumbnail-item">
               <img
                 class="thumbnail-image"
                 src="./images/image-product-4-thumbnail.jpg"
-                alt=""
+                alt="Side view of a sneaker on some rocks"
               />
             </li>
           </ul>
@@ -235,19 +237,23 @@
         </div>
         <div class="item-quantity-section">
           <div class="item-amount-container">
-            <img
-              id="minusQtyBtn"
-              class="thumbnail-image"
-              src="./images/icon-minus.svg"
-              alt="plus button"
-            />
+            <button>
+              <img
+                id="minusQtyBtn"
+                class="thumbnail-image"
+                src="./images/icon-minus.svg"
+                alt="plus icon"
+              />
+            </button>
             <span id="amountQty" class="amount">0</span>
-            <img
-              id="plusQtyBtn"
-              class="thumbnail-image"
-              src="./images/icon-plus.svg"
-              alt="minus button"
-            />
+            <button>
+              <img
+                id="plusQtyBtn"
+                class="thumbnail-image"
+                src="./images/icon-plus.svg"
+                alt="minus icon"
+              />
+            </button>
           </div>
           <button id="addToCart" class="add-to-cart-button">
             <img
