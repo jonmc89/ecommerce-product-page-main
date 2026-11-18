@@ -114,6 +114,7 @@ function updateCart() {
     cartEmpty.classList.remove('cart-empty-hide');
     cartSummary.classList.remove('cart-summary-show');
     amountBadge.classList.remove('amount-badge-show');
+    amountQty.textContent = itemQty;
   } else {
     cartQty.textContent = itemQty;
     totalPriceAmount.textContent = `$${totalPrice}`;
@@ -126,7 +127,7 @@ function updateCart() {
 
 function clearCart() {
   itemQty = 0;
-  amountQty.textContent = 0;
+
   updateCart();
 }
 // Event Listeners
