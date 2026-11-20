@@ -14,7 +14,7 @@ mobileMenuBtnEl.addEventListener('click', () => {
     isOpen ? 'Open navigation menu' : 'Close navigation menu',
   );
 
-  mobileMenuEl.inert = isOpen;
+  mobileMenuEl.toggle.inert = isOpen;
   mobileMenuEl.classList.toggle('mobile-menu-open', !isOpen);
   mobileMenuBtnEl.classList.toggle('menu-button-icon-close', !isOpen);
   overlayEl.classList.toggle('overlay-show', !isOpen);
@@ -36,7 +36,7 @@ cartIconEl.addEventListener('click', (event) => {
     isOpen ? 'Open cart menu' : 'Close cart menu',
   );
 
-  cartEl.inert = isOpen;
+  cartEl.toggle.inert = isOpen;
 
   cartEl.classList.toggle('cart-visible', !isOpen);
 });
@@ -174,9 +174,11 @@ const closeLighboxBtn = document.getElementById('closeLightBoxBtn');
 if (desktopView.matches) {
   mainImage.addEventListener('click', () => {
     lightboxContainer.classList.add('open-light-box');
+    lightboxContainer.inert = true;
   });
 
   closeLighboxBtn.addEventListener('click', () => {
     lightboxContainer.classList.remove('open-light-box');
+    lightboxContainer.inert = false;
   });
 }
