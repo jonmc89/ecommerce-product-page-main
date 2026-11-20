@@ -777,6 +777,11 @@ main {
 
   .thumbnail-list {
     display: flex;
+
+    button {
+      border: none;
+      background-color: transparent;
+    }
   }
 
   .cart-container {

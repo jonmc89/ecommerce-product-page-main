@@ -58,9 +58,11 @@ thumbnails.forEach((thumbnail, index) => {
 
     thumbnails.forEach((thumb) => {
       thumb.classList.remove('thumbnail-active');
+      thumb.ariaCurrent = false;
     });
 
     thumbnail.classList.add('thumbnail-active');
+    thumb.ariaCurrent = true;
   });
 });
 
