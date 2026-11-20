@@ -4,6 +4,8 @@ const mobileMenuEl = document.getElementById('mobileMenu');
 const overlayEl = document.getElementById('overlayEl');
 const desktopView = window.matchMedia('(min-width: 1024px)');
 
+mobileMenuEl.inert = mobileMenuBtnEl.getAttribute('aria-expanded') !== 'true';
+
 mobileMenuBtnEl.addEventListener('click', () => {
   const isOpen = mobileMenuBtnEl.getAttribute('aria-expanded') === 'true';
 
@@ -14,7 +16,7 @@ mobileMenuBtnEl.addEventListener('click', () => {
     isOpen ? 'Open navigation menu' : 'Close navigation menu',
   );
 
-  mobileMenuEl.toggle.inert = isOpen;
+  mobileMenuEl.inert = isOpen;
   mobileMenuEl.classList.toggle('mobile-menu-open', !isOpen);
   mobileMenuBtnEl.classList.toggle('menu-button-icon-close', !isOpen);
   overlayEl.classList.toggle('overlay-show', !isOpen);
@@ -24,6 +26,8 @@ mobileMenuBtnEl.addEventListener('click', () => {
 
 const cartEl = document.getElementById('cartEl');
 const cartIconEl = document.getElementById('cartIconEl');
+
+cartEl.inert = cartIconEl.getAttribute('aria-expanded') !== 'true';
 
 cartIconEl.addEventListener('click', (event) => {
   const isOpen = cartIconEl.getAttribute('aria-expanded') === 'true';
@@ -36,7 +40,7 @@ cartIconEl.addEventListener('click', (event) => {
     isOpen ? 'Open cart menu' : 'Close cart menu',
   );
 
-  cartEl.toggle.inert = isOpen;
+  cartEl.inert = isOpen;
 
   cartEl.classList.toggle('cart-visible', !isOpen);
 });
@@ -58,11 +62,11 @@ thumbnails.forEach((thumbnail, index) => {
 
     thumbnails.forEach((thumb) => {
       thumb.classList.remove('thumbnail-active');
-      thumb.ariaCurrent = false;
+      thumbnail.ariaCurrent = true;
     });
 
     thumbnail.classList.add('thumbnail-active');
-    thumb.ariaCurrent = true;
+    thumbnail.ariaCurrent = false;
   });
 });
 
