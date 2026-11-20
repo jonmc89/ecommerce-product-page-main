@@ -81,8 +81,7 @@ const amountBadgeValue = document.getElementById('amountBadgeValue');
 // Price Maths
 let itemQty = 0;
 let listPrice = 125.0;
-listPrice = listPrice.toFixed(2);
-let totalPrice;
+let totalPrice = 0;
 
 function addToAmount() {
   amountQty.textContent = itemQty;
