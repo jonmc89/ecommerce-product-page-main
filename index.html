@@ -54,12 +54,12 @@
                   ><span id="totalPriceAmount"></span>
                 </p>
               </div>
-              <button id="deleteBtn" class="delete-button">
-                <img
-                  src="./images/icon-delete.svg"
-                  alt=""
-                  aria-label="Remove item from cart"
-                />
+              <button
+                id="deleteBtn"
+                class="delete-button"
+                aria-label="Remove item from cart"
+              >
+                <img src="./images/icon-delete.svg" alt="" />
               </button>
             </div>
           </div>
@@ -250,22 +250,18 @@
         </div>
         <div class="item-quantity-section">
           <div class="item-amount-container">
-            <button>
+            <button id="minusQtyBtn" aria-label="plus-icon">
               <img
-                id="minusQtyBtn"
                 class="thumbnail-image"
                 src="./images/icon-minus.svg"
                 alt=""
-                aria-label="plus-icon"
               />
             </button>
             <span id="amountQty" class="amount">0</span>
-            <button>
+            <button id="plusQtyBtn" aria-label="minus icon">
               <img
-                id="plusQtyBtn"
                 class="thumbnail-image"
                 src="./images/icon-plus.svg"
-                aria-label="minus icon"
                 alt=""
               />
             </button>
