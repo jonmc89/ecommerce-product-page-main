@@ -1,8 +1,8 @@
 // Mobile Menu
 const mobileMenuBtnEl = document.getElementById('mobileMenuBtn');
 const mobileMenuEl = document.getElementById('mobileMenu');
-
 const overlayEl = document.getElementById('overlayEl');
+const desktopView = window.matchMedia('(min-width: 1024px)');
 
 mobileMenuBtnEl.addEventListener('click', () => {
   const isOpen = mobileMenuBtnEl.getAttribute('aria-expanded') === 'true';
@@ -15,10 +15,9 @@ mobileMenuBtnEl.addEventListener('click', () => {
   );
 
   mobileMenuEl.inert = isOpen;
-
   mobileMenuEl.classList.toggle('mobile-menu-open', !isOpen);
   mobileMenuBtnEl.classList.toggle('menu-button-icon-close', !isOpen);
-  overlayEl.classList.toggle('overlay-show');
+  overlayEl.classList.toggle('overlay-show', !isOpen);
 });
 
 // Cart Menu
@@ -171,10 +170,12 @@ const lightboxContainer = document.getElementById('lightboxContainer');
 const mainImage = document.getElementById('mainImage');
 const closeLighboxBtn = document.getElementById('closeLightBoxBtn');
 
-mainImage.addEventListener('click', () => {
-  lightboxContainer.classList.add('open-light-box');
-});
+if (desktopView.matches) {
+  mainImage.addEventListener('click', () => {
+    lightboxContainer.classList.add('open-light-box');
+  });
 
-closeLighboxBtn.addEventListener('click', () => {
-  lightboxContainer.classList.remove('open-light-box');
-});
+  closeLighboxBtn.addEventListener('click', () => {
+    lightboxContainer.classList.remove('open-light-box');
+  });
+}
